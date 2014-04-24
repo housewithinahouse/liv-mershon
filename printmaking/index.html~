@@ -1,0 +1,55 @@
+<!doctype html> 
+<html>
+	<head>
+		<title>Liv Mershon | Printmaking</title>
+		
+		<link rel="stylesheet/less" type="text/css" href="../css/other.less" />
+		<script type="text/javascript">
+			less = {
+				env: "development", // or "production"
+				async: false,       // load imports async
+				fileAsync: false,   // load imports async when in a page under
+									// a file protocol
+				poll: 1000,         // when in watch mode, time in ms between polls
+				functions: {},      // user functions, keyed by name
+				dumpLineNumbers: "comments", // or "mediaQuery" or "all"
+			   // relativeUrls: false,// whether to adjust url's to be relative
+									// if false, url's are already relative to the
+									// entry less file
+			   // rootpath: ":/a.com/"// a path to add on to the start of every url
+									//resource
+			};</script>
+		<script src="../js/less.js" type="text/javascript"></script>
+	</head>
+	<body style="width:2000px">
+	<section class="rectangles">
+		<nav class="leftSide">
+			<a href="../"><doubleMenuButton> Liv </doubleMenuButton></a>
+			<a href="../"><menuButton>&laquo;<menuname>Home</menuname></menuButton></a>
+			<a href="../drawings"><menuButton>&curren;<menuname>Drawings</menuname></menuButton></a>
+			<a href="../printmaking"><menuButton>&#135;<menuname>Printmaking</menuname></menuButton></a>
+			<a href="http://www.youtube.com/user/MammyFlammy/videos" target="_blank"><menuButton>&#9895;<menuname>MammyFlammy</menuname></menuButton></a>
+			<a href="../badpsychic"><menuButton>&#9907;<menuname>Bad Psychic</menuname>		</menuButton></a>
+			<a href="../comics"><menuButton>&#9633;<menuname>Comics</menuname></menuButton></a>
+			<menuButton>&plusmn;<menuname>Other</menuname> </menuButton>
+			<a href="../about"><menuButton>&#9660;<menuname>About</menuname></menuButton></a>
+			<doubleMenuButton> <h3>by: <a href="http://robodraw.co">housewithinahouse.com</a> 2013 </h2></doubleMenuButton>
+		</nav>		
+			<magicRectangle>
+				<a id="thumb1" href="images/woodcut1.jpg" class="highslide"   onclick="return hs.expand(this)">
+					<img src="images/woodcut1_m.jpg"> 
+				</a>
+			</magicRectangle>
+			<magicRectangle>
+				<a id="thumb1" href="images/goodfortune.jpg" class="highslide"   onclick="return hs.expand(this)">
+					<img src="images/goodfortune_m.jpg"> 
+				</a>
+			</magicRectangle>
+			<magicRectangle>
+				<a id="thumb1" href="images/woodcut.jpg" class="highslide"   onclick="return hs.expand(this)">
+					<img src="images/woodcut_m.jpg"> 
+				</a>
+			</magicRectangle>
+		</section2>	
+	</body>
+</html>

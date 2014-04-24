@@ -1,0 +1,122 @@
+
+html, body {
+	/*hack :: full width bars from:http://css-tricks.com/full-browser-width-bars*/
+	overflow-x: hidden;
+}
+
+
+
+section {
+	float:left;  
+	width: 90%;
+	margin: 170px auto 0 auto;
+	#overflow:hidden;
+}
+
+header{
+	width:25px;
+	background:black;
+	float:left;
+	clear:left;
+	height:200px;
+	margin:0;
+}
+
+
+aside {
+	/*not in use, doesn't work quite right yet*/
+	float:right;
+	background:black;
+	color:#fff;
+	font-size:25px;
+	width:4%;
+	#max-width:1.3em;
+	height:1000px;
+	#overflow:hidden;
+	text-align:center;
+}
+h1 {
+  font-size:25px;
+  height:30px;
+  position: relative;
+  text-align:right;
+  background: black; 
+  color:#fff;
+  padding-right:.5em;
+  margin-bottom:0;
+}
+
+h1:before{
+  /*this is the rest of the full left h1's*/
+  content: "";
+  position: absolute;
+  background: black;  /* Match the background */
+  top: 0;
+  bottom: 0;
+  width: 9999px;   /* some huge width */
+  right: 100%;
+}
+
+img{	
+	display: block;
+	margin-left: 10px; /*so that the edge gets cut off*/
+	width:700px;
+   	#margin-right: auto;
+   	
+}
+
+figure{
+	
+	display: block;
+	position: relative;
+	float:right;
+	margin-right: 0;
+	margin-top: 0;
+	margin-bottom:0;
+	width:90%;
+	#max-width:39.5em;
+	overflow:hidden;
+	height:15em;
+	
+}
+
+figlink {
+	font-size:25px;
+	width:30px;
+	height:100%;
+ 	text-align:center;
+ 	background: black; 
+ 	color:#300;
+ 	right:0;
+	position: absolute; 
+	top:0;
+	font-size:25px;
+	#max-width:1.3em;
+	height:1000px;
+	overflow:hidden;
+	text-align:center;
+	transition:all 1s;
+}
+
+figcaption { 
+        font-size:1.5em;
+        height:1.2em;
+ 	text-align:left;
+ 	right:25px;
+	position: absolute; 
+	background: black;
+	color: white; 
+	top:0;
+	
+	max-width:0;
+	overflow:hidden;
+	text-overflow:clip;
+	-webkit-transition:all 1s;
+	-moz-transition:all 1s;
+	transition:all 1s ease;
+	
+}
+
+figure a:hover>figcaption { max-width:50%; padding-left:1.2em; padding-right:1.2em;}
+figure a:hover>figlink {color:#fff}
+	

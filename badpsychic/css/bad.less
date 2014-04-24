@@ -1,0 +1,237 @@
+@buttonColor: white;
+@buttonTextColor: black;
+
+@buttonSize: 100px;
+@buttonTextSize: 80px;
+@buttonTextSizeSmall:12px;
+
+@barColor: white;
+@notBarColor: #eff;
+@barTextColor: black;
+@smallBarTextSize:12px;
+
+@barSize: 30px;
+@barTextSize: 25px;
+
+@headerMenuCount: 5;
+
+@imageHeight: 666px;
+
+body{
+	background:black;
+}
+/*for displaying large images*/
+figure{ 
+	display: block;
+	position: relative;
+	float:right;
+	margin-right: 0;
+	margin-top: 0;
+	margin-bottom:0;
+	width:100%;
+	overflow:hidden;
+	height:@imageHeight;
+	img{    
+		display: block;       
+	}
+	a:hover>figcaption {.a-figcaption}
+	a:hover>figlink {.a-figlink}
+}
+
+/*I'm not sure this is in use*/
+.full{
+	height:100%;
+	width:90%;
+	img{
+		width:90%;
+		}
+	}
+
+/*mixin for styling the text on an figure*/
+.imagetext{
+	font-size:@barTextSize;				
+	text-align:center;
+	background: @barColor;				
+	position: absolute; 
+	top:0;
+	overflow:hidden;
+	transition:all 1s;
+	-webkit-transition:all 1s;
+	-moz-transition:all 1s;
+}
+/*right-hand side text on figure*/
+figlink {
+	.imagetext;				
+	text-align:center;				
+	right:0;
+	color:@notBarColor;
+	height:@imageHeight;
+	width:@barSize;				
+}	.a-figlink {color:@barTextColor;}
+/*pop-up caption on figure*/
+figcaption { 
+	.imagetext;        		
+	max-width:0;
+	color: @barTextColor;
+	height:@barSize;
+	right: @barSize;				
+}.a-figcaption {max-width:50%; padding-left:1.2em; padding-right:1.2em;}
+
+
+/*mixin for styling square things*/
+.squareDefault{
+	background:@buttonColor;
+	color:@buttonTextColor;
+	font-size: @buttonTextSize;
+	width:@buttonSize;	
+	height:@buttonSize;
+	text-align:center;
+	overflow:hidden;
+	&:hover>menuname{
+		.a-menuname;
+	}
+	float:left;	
+	margin:10px;		
+}
+
+
+section{
+	position:absolute;
+	left:@buttonSize*2+50px;
+	height:@buttonSize*5+100px;
+	overflow:auto;
+	background:#ddd;
+
+}
+
+section2 {
+				float:left;  
+				width: 90%;
+				margin: @barSize auto 0 auto;
+}
+
+
+leftBarItem{
+		width:@barSize;		
+		float:left;
+		background:@barColor;
+		height:@barSize;
+		margin:0;
+		clear:left;
+		color:@barTextColor;
+		font-size:@barTextSize;
+		text-align:center;
+		overflow:hidden;
+		&:hover>menuname{
+			.a-menuname;
+			}			
+}
+
+footer{
+ display: block;
+ clear:both;
+ &:hover h2{
+ 	color:@barTextColor;
+ }
+}
+
+
+
+magicSquare{
+	.squareDefault;
+}
+
+nav{	
+	width:@buttonSize*2+40px;
+	height:@buttonSize*6+120px;
+	overflow:hidden;
+	float:left;
+	
+	menuButton{
+		.squareDefault;									
+	}
+	
+	doubleMenuButton{
+		.squareDefault;
+		width:@buttonSize*2+20px;		
+	}
+}
+
+quadMenuButton{
+	background:@buttonColor;
+		color:@buttonTextColor;
+		font-size: @buttonTextSizeSmall;
+		width:@buttonSize*2;	
+		height:@buttonSize*2;	
+		position:relative;
+		float:left;	
+		margin:10px;
+		text-align:center;
+		overflow:hidden;
+		&:hover>menuname{
+			.a-menuname;
+			}			
+}
+
+
+h1 {
+	font-size:@barTextSize;
+	height:@barSize;
+	position: relative;
+	text-align:right;
+	background: @barColor; 
+	color:@barTextColor;
+	padding-right:.5em;
+	margin-bottom:0;
+	margin-top:0;
+	margin-right:0;
+	&:before{
+		/*this is the rest of the full left h1's*/
+		content: "";
+		position: absolute;
+		background: black;  /* Match the background */
+		top: 0;
+		bottom: 0;
+		width: 9999px;   /* some huge width */
+		right: 100%;
+	}
+}
+
+h2 {
+	font-size:@barTextSize;
+	height:@barSize;
+	position: relative;
+	text-align:center;
+	background: @barColor; 
+	color:@notBarColor;
+	padding-right:.5em;
+	margin-bottom:50px;
+	margin-top:0;
+	font-weight:normal;
+	transition:all 2s;
+	&:before{
+		/*this is the rest of the full left h1's*/
+		content: "";
+		position: absolute;
+		background: black;  /* Match the background */
+		top: 0;
+		bottom: 0;
+		width: 9999px;   /* some huge width */
+		right: 100%;
+	}
+}
+
+menuname { 	
+	text-align:center;			
+	position: absolute; 
+	overflow:hidden;
+	transition:all 2s;
+	-webkit-transition:all 2s;
+	-moz-transition:all 2s;        		
+	max-width:0;
+	z-index:1;
+	background:@barColor;
+	height:@barSize;	
+	color: @barTextColor;
+}
+.a-menuname {max-width:1000px; padding-left:.5em; padding-right:1.6em;} 
